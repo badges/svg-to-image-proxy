@@ -1,0 +1,51 @@
+{
+  "name": "svg-to-image-proxy",
+  "version": "0.1.0",
+  "description": "A web function to create PNGs from SVGs",
+  "keywords": [
+    "svg",
+    "png",
+    "image",
+    "proxy",
+    "rasterizer"
+  ],
+  "scripts": {
+    "lint": "eslint \"**/*.js\"",
+    "prettier": "prettier --write \"**/*.@(js|md|yml|json)\"",
+    "prettier-check": "prettier-check \"**/*.@(js|md|yml|json)\"",
+    "mocha": "BASE_URL=https://img.example.test mocha test.js",
+    "test": "run-p lint prettier-check mocha",
+    "start": "micro"
+  },
+  "repository": "paulmelnikow/svg-to-image-proxy",
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/paulmelnikow/svg-to-image-proxy/issues"
+  },
+  "homepage": "https://github.com/paulmelnikow/svg-to-image-proxy#readme",
+  "dependencies": {
+    "gm": "^1.23.1",
+    "got": "^9.6.0",
+    "is-svg": "^3.0.0",
+    "micro": "^9.3.3"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^5.9.0",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "is-png": "^1.1.0",
+    "mocha": "^6.0.2",
+    "nock": "^10.0.6",
+    "npm-run-all": "^4.1.3",
+    "prettier": "^1.15.2",
+    "prettier-check": "^2.0.0",
+    "test-listen": "^1.1.0"
+  }
+}

@@ -1,0 +1,26 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:10
+
+    steps:
+      - checkout
+
+      - run:
+          name: Install dependencies
+          command: npm ci
+
+      - run:
+          name: Run tests
+          command: npm run mocha
+
+      - run:
+          name: Check lint
+          command: npm run lint
+          when: always
+
+      - run:
+          name: Check prettier
+          command: npm run prettier-check
+          when: always
