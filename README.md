@@ -9,7 +9,8 @@
 [build]: https://circleci.com/gh/paulmelnikow/svg-to-image-proxy/tree/master
 [prettier]: https://prettier.io/
 
-Web function to generate PNGs from SVGs.
+Web function to generate PNGs from SVGs. Based on [convert-svg-to-png][]
+which uses headless Chromium.
 
 The proxy accepts a request for e.g. `https://raster.example.com/example.png`
 and translates it to a request for
@@ -24,10 +25,7 @@ The host comes from the `BASE_URL` environment variable.
 Designed for [Shields][] though may be useful for other application as well.
 
 [shields]: https://github.com/badges/shields
-
-## Requirements
-
-Requires [ImageMagick](https://www.imagemagick.org/script/download.php).
+[convert-svg-to-png]: https://www.npmjs.com/package/convert-svg-to-png
 
 ## Deployment
 

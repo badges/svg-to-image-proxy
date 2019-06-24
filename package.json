@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/paulmelnikow/svg-to-image-proxy#readme",
   "dependencies": {
-    "gm": "^1.23.1",
+    "convert-svg-to-png": "^0.5.0",
     "got": "^9.6.0",
     "is-svg": "^3.0.0",
     "micro": "^9.3.3"
