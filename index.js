@@ -5,7 +5,12 @@ const { createConverter } = require('convert-svg-to-png')
 const got = require('got')
 const isSvg = require('is-svg')
 
-const converter = createConverter()
+const converter = createConverter(
+  process.env.CI
+    ? { puppeteer: ['--no-sandbox', '--disable-setuid-sandbox'] }
+    : undefined
+)
+
 async function toPng(svg) {
   return converter.convert(svg)
 }
