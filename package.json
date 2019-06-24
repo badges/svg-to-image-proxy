@@ -14,7 +14,7 @@
     "prettier": "prettier --write \"**/*.@(js|md|yml|json)\"",
     "prettier:check": "prettier --check \"**/*.@(js|md|yml|json)\"",
     "mocha": "BASE_URL=https://img.example.test mocha test.js",
-    "test": "run-p lint prettier-check mocha",
+    "test": "run-p lint prettier:check mocha",
     "start": "micro"
   },
   "repository": "paulmelnikow/svg-to-image-proxy",
