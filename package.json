@@ -27,7 +27,7 @@
   "dependencies": {
     "convert-svg-to-png": "^0.5.0",
     "got": "^9.6.0",
-    "is-svg": "^3.0.0",
+    "is-svg": "^4.2.0",
     "micro": "^9.3.3"
   },
   "devDependencies": {
