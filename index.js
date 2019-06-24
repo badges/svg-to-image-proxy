@@ -6,6 +6,7 @@ const got = require('got')
 const isSvg = require('is-svg')
 
 const converter = createConverter(
+  // https://discuss.circleci.com/t/puppeteer-fails-on-circleci/22650/6
   process.env.CI
     ? { puppeteer: ['--no-sandbox', '--disable-setuid-sandbox'] }
     : undefined
