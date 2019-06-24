@@ -23,6 +23,7 @@ after(async function() {
 describe('svg-to-image-proxy endpoint', function() {
   let service, url
   beforeEach(async function() {
+    this.timeout('10s')
     service = micro(await setup())
     url = await listen(service)
   })
