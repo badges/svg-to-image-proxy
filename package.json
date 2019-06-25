@@ -28,7 +28,7 @@
     "convert-svg-to-png": "^0.5.0",
     "got": "^9.6.0",
     "is-svg": "^4.2.0",
-    "micro": "^9.3.3",
+    "micro": "^9.3.4",
     "puppeteer": "^1.18.0"
   },
   "devDependencies": {
