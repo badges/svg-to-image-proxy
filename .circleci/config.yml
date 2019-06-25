@@ -12,10 +12,6 @@ jobs:
           command: npm ci
 
       - run:
-          name: Check Chrome version
-          command: google-chrome --version
-
-      - run:
           name: Run tests
           command: npm run mocha
 
