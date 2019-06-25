@@ -6,7 +6,9 @@ const isPng = require('is-png')
 const micro = require('micro')
 const nock = require('nock')
 const listen = require('test-listen')
-const { setup, cleanup } = require('.')
+const setup = require('.')
+
+const { cleanup } = setup
 
 nock.disableNetConnect()
 nock.enableNetConnect(/localhost|127.0.0.1/)
@@ -23,7 +25,8 @@ after(async function() {
 describe('svg-to-image-proxy endpoint', function() {
   let service, url
   beforeEach(async function() {
-    service = micro(await setup())
+    this.timeout('10s')
+    service = micro(await setup)
     url = await listen(service)
   })
   afterEach(function() {
@@ -124,5 +127,16 @@ describe('svg-to-image-proxy endpoint', function() {
     expect(body).to.satisfy(isPng)
 
     scope.done()
+  })
+
+  it('returns 404 for ignored paths', async function() {
+    const { body, statusCode } = await got(`${url}/favicon.ico`, {
+      encoding: null,
+      retry: { retries: 0 },
+      throwHttpErrors: false,
+    })
+
+    expect(statusCode).to.equal(404)
+    expect(Buffer.alloc(0).equals(body))
   })
 })

@@ -31,6 +31,8 @@ const responseHeadersToForward = [
   'last-modified',
 ]
 
+const ignoredPaths = ['/favicon.ico']
+
 async function handler(req, res) {
   res.setHeader('content-type', 'image/png')
 
@@ -42,6 +44,11 @@ async function handler(req, res) {
   // Ensure we're always using the `baseUrl` by using just the path from
   // the request URL.
   const { pathname, search } = new URL(req.url, 'https://bogus.test')
+
+  if (ignoredPaths.includes(pathname)) {
+    res.statusCode = 404
+    return ''
+  }
 
   const outPath = pathname.replace('.png', '.svg')
   const outUrl = new URL(outPath, baseUrl)
@@ -61,6 +68,7 @@ async function handler(req, res) {
   if (isSvg(svg)) {
     return toPng(svg)
   } else {
+    console.log(svg)
     res.statusCode = 502
     return errorBadge
   }
@@ -74,7 +82,5 @@ async function setup() {
   )
   return handler
 }
-module.exports = {
-  setup,
-  cleanup,
-}
+module.exports = setup()
+module.exports.cleanup = cleanup

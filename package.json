@@ -14,7 +14,7 @@
     "prettier": "prettier --write \"**/*.@(js|md|yml|json)\"",
     "prettier:check": "prettier --check \"**/*.@(js|md|yml|json)\"",
     "mocha": "BASE_URL=https://img.example.test mocha test.js",
-    "test": "run-p lint prettier-check mocha",
+    "test": "run-p lint prettier:check mocha",
     "start": "micro"
   },
   "repository": "paulmelnikow/svg-to-image-proxy",
@@ -28,7 +28,8 @@
     "convert-svg-to-png": "^0.5.0",
     "got": "^9.6.0",
     "is-svg": "^4.2.0",
-    "micro": "^9.3.3"
+    "micro": "^9.3.3",
+    "puppeteer": "^1.18.0"
   },
   "devDependencies": {
     "chai": "^4.2.0",
