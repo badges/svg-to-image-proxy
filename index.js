@@ -10,14 +10,14 @@ const converter = createConverter(
   process.env.CI
     ? {
         puppeteer: {
-          args: [
-            '--no-sandbox',
-            '--disable-setuid-sandbox',
-            '--disable-dev-shm-usage',
-            '--headless',
-            '--disable-gpu',
-          ],
-          dumpio: true,
+          // args: [
+          //   '--no-sandbox',
+          //   '--disable-setuid-sandbox',
+          //   '--disable-dev-shm-usage',
+          //   '--headless',
+          //   '--disable-gpu',
+          // ],
+          // dumpio: true,
         },
       }
     : undefined
