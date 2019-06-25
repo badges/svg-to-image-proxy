@@ -14,6 +14,8 @@ const converter = createConverter(
             '--no-sandbox',
             '--disable-setuid-sandbox',
             '--disable-dev-shm-usage',
+            '--headless',
+            '--disable-gpu',
           ],
         },
       }
