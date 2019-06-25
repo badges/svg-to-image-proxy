@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "name": "svg-to-image-proxy",
+  "build": {
+    "env": {
+      "PUPPETEER_SKIP_CHROMIUM_DOWNLOAD": "true"
+    }
+  },
+  "env": {
+    "BASE_URL": "https://img.shields.io"
+  },
+  "builds": [
+    {
+      "src": "rasterize.js",
+      "use": "@now/node",
+      "config": { "maxLambdaSize": "40mb" }
+    }
+  ],
+  "routes": [{ "src": "/(.*)", "dest": "/rasterize.js" }]
+}
