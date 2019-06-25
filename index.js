@@ -17,6 +17,7 @@ const converter = createConverter(
             '--headless',
             '--disable-gpu',
           ],
+          dumpio: true,
         },
       }
     : undefined
