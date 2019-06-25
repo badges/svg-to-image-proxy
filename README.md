@@ -29,43 +29,8 @@ Designed for [Shields][] though may be useful for other application as well.
 
 ## Deployment
 
-Runs on Heroku, Zeit Now, and probably most other platforms.
-
-### Heroku
-
-[![](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
-
-Optionally after deployment, to push upgrades or work with source code, clone
-this repo (or a fork) and connect it with the Heroku app:
-
-```bash
-git clone https://github.com/paulmelnikow/svg-to-image-proxy
-cd ghost-on-heroku
-
-heroku git:remote --app YOURAPPNAME
-heroku info
-```
-
-Then you can push commits to the Heroku app, triggering new deployments:
-
-```bash
-git add .
-git commit -m "Important changes"
-git push heroku master
-```
-
-Watch the app's server-side behavior to see errors and request traffic:
-
-```bash
-heroku logs -t
-```
+Runs on Zeit Now.
 
 ## License
 
 This project is licensed under the MIT license.
-
-## Acknowledgements
-
-Heroku documentation adapted from [ghost-on-heroku][].
-
-[ghost-on-heroku]: https://github.com/cobyism/ghost-on-heroku
