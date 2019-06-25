@@ -24,7 +24,7 @@ const responseHeadersToForward = [
   'last-modified',
 ]
 
-const ignoredPaths = ['/favicon.ico']
+const ignoredPaths = ['/', '/favicon.ico']
 
 let cleanup
 async function setup() {
