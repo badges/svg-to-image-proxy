@@ -26,6 +26,7 @@ const responseHeadersToForward = [
 
 const ignoredPaths = ['/favicon.ico']
 
+let cleanup
 async function setup() {
   const converter = createConverter({
     puppeteer: {
@@ -34,6 +35,7 @@ async function setup() {
       headless: chrome.headless,
     },
   })
+  cleanup = async () => converter.destroy()
 
   const errorBadge = await converter.convert(
     // Fetched from https://img.shields.io/badge/invalid-svg-red.svg
@@ -80,8 +82,6 @@ async function setup() {
     }
   }
 
-  handler.cleanup = async () => converter.destroy()
-
   return handler
 }
 const handlerPromise = setup()
@@ -90,3 +90,4 @@ module.exports = async (req, res) =>
   require('micro').run(req, res, async (req, res) =>
     (await handlerPromise)(req, res)
   )
+module.exports.cleanup = async () => cleanup()
