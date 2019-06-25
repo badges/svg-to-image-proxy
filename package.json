@@ -17,14 +17,16 @@
     "test": "run-p lint prettier:check mocha",
     "start": "micro"
   },
+  "main": "rasterize.js",
   "repository": "paulmelnikow/svg-to-image-proxy",
-  "author": "",
+  "author": "Paul Melnikow",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/paulmelnikow/svg-to-image-proxy/issues"
   },
   "homepage": "https://github.com/paulmelnikow/svg-to-image-proxy#readme",
   "dependencies": {
+    "chrome-aws-lambda": "^1.18.0",
     "convert-svg-to-png": "^0.5.0",
     "got": "^9.6.0",
     "is-svg": "^4.2.0",
@@ -48,6 +50,6 @@
     "test-listen": "^1.1.0"
   },
   "files": [
-    "index.js"
+    "rasterizer.js"
   ]
 }

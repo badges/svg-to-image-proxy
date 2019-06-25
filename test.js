@@ -37,6 +37,8 @@ describe('svg-to-image-proxy endpoint', function() {
   })
 
   it('rasterizes svg fetched from the expected address', async function() {
+    this.timeout('20s')
+
     const scope = nock(baseUrl)
       .get('/badge/foo-bar-blue.svg')
       .reply(200, badgeSvg)
