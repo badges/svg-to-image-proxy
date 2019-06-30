@@ -6,6 +6,7 @@
       "PUPPETEER_SKIP_CHROMIUM_DOWNLOAD": "true"
     }
   },
+  "alias": "raster.shields-server.com",
   "env": {
     "BASE_URL": "https://img.shields.io"
   },
