@@ -18,13 +18,13 @@
     "start": "micro"
   },
   "main": "rasterize.js",
-  "repository": "paulmelnikow/svg-to-image-proxy",
+  "repository": "badges/svg-to-image-proxy",
   "author": "Paul Melnikow",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/paulmelnikow/svg-to-image-proxy/issues"
+    "url": "https://github.com/badges/svg-to-image-proxy/issues"
   },
-  "homepage": "https://github.com/paulmelnikow/svg-to-image-proxy#readme",
+  "homepage": "https://github.com/badges/svg-to-image-proxy#readme",
   "dependencies": {
     "chrome-aws-lambda": "^1.18.0",
     "convert-svg-to-png": "^0.5.0",
