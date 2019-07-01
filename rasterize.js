@@ -78,10 +78,15 @@ async function setup() {
       }
     })
 
+    if (statusCode === 304) {
+      // Do not send any content.
+      res.statusCode = 304
+      return ''
+    }
+
     if (isSvg(svg)) {
       return converter.convert(svg)
     } else {
-      console.log(`Expected svg, got: ${svg}`)
       res.statusCode = 502
       return errorBadge
     }
