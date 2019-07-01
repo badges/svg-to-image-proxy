@@ -63,10 +63,14 @@ async function setup() {
     const outUrl = new URL(outPath, baseUrl)
     outUrl.search = search
 
-    const { body: svg, headers: responseHeaders } = await got(outUrl, {
-      headers: requestHeaders,
-      throwHttpErrors: false,
-    })
+    const { body: svg, headers: responseHeaders, statusCode } = await got(
+      outUrl,
+      {
+        headers: requestHeaders,
+        throwHttpErrors: false,
+      }
+    )
+    console.log(`Status code ${statusCode}`)
 
     responseHeadersToForward.forEach(header => {
       if (header in responseHeaders) {
