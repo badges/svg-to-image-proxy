@@ -77,6 +77,7 @@ async function setup() {
     if (isSvg(svg)) {
       return converter.convert(svg)
     } else {
+      console.log(`Expected svg, got: ${svg}`)
       res.statusCode = 502
       return errorBadge
     }
