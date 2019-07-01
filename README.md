@@ -35,7 +35,7 @@ Staging is deployed automatically from master: https://shields-raster-staging.no
 
 Production is deployed manually for now.
 
-To deploy, run `now alias shields-raster-staging.now.sh shields-raster.now.sh`
+To deploy, run `now alias shields-raster-staging.now.sh raster.shields.io`
 
 The production server is at: https://raster.shields.io/
 
