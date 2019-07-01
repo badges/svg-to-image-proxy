@@ -31,6 +31,14 @@ Designed for [Shields][] though may be useful for other application as well.
 
 Runs on Zeit Now.
 
+Staging is deployed automatically from master: https://shields-raster-staging.now.sh/
+
+Production is deployed manually for now.
+
+To deploy, run `now alias shields-raster-staging.now.sh shields-raster.now.sh`
+
+The production server is at: https://raster.shields.io/
+
 ## License
 
 This project is licensed under the MIT license.
