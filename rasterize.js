@@ -63,16 +63,26 @@ async function setup() {
     const outUrl = new URL(outPath, baseUrl)
     outUrl.search = search
 
-    const { body: svg, headers: responseHeaders } = await got(outUrl, {
-      headers: requestHeaders,
-      throwHttpErrors: false,
-    })
+    const { body: svg, headers: responseHeaders, statusCode } = await got(
+      outUrl,
+      {
+        headers: requestHeaders,
+        throwHttpErrors: false,
+      }
+    )
+    console.log(`Status code ${statusCode}`)
 
     responseHeadersToForward.forEach(header => {
       if (header in responseHeaders) {
         res.setHeader(header, responseHeaders[header])
       }
     })
+
+    if (statusCode === 304) {
+      // Do not send any content.
+      res.statusCode = 304
+      return ''
+    }
 
     if (isSvg(svg)) {
       return converter.convert(svg)
