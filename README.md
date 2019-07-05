@@ -58,8 +58,8 @@ Production: https://raster.shields.io/
 - [Zeit Smart CDN][cdn]
 - [Now for GitHub][]
 
-Staging is deployed automatically from master. Production is deployed manually
-for now.
+Pull requests are deployed automatically. Staging is deployed automatically
+from master. Production is deployed manually for now.
 
 To deploy, run `now alias shields-raster-staging.now.sh raster.shields.io`.
 This ships the current staging build to production.
