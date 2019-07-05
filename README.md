@@ -61,6 +61,8 @@ Production: https://raster.shields.io/
 Pull requests are deployed automatically. Staging is deployed automatically
 from master. Production is deployed manually for now.
 
+For information about current deploys, see the [Now dashboard][].
+
 To deploy, run `now alias shields-raster-staging.now.sh raster.shields.io`.
 This ships the current staging build to production.
 
@@ -71,6 +73,7 @@ because it's cached by [Now's Smart CDN][cdn] instead.
 [zeit now]: https://zeit.co/now
 [cdn]: https://zeit.co/smart-cdn
 [now for github]: https://zeit.co/github
+[now dashboard]: https://zeit.co/shields1/svg-to-image-proxy
 
 ## License
 
