@@ -17,7 +17,6 @@
     "test": "run-p lint prettier:check mocha",
     "start": "micro"
   },
-  "main": "rasterize.js",
   "repository": "badges/svg-to-image-proxy",
   "author": "Paul Melnikow",
   "license": "MIT",
@@ -50,6 +49,6 @@
     "test-listen": "^1.1.0"
   },
   "files": [
-    "rasterizer.js"
+    "index.js"
   ]
 }
