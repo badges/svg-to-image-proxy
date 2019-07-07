@@ -18,7 +18,7 @@
     }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "/index.js" },
+    { "src": "/(.+)", "dest": "/index.js" },
     {
       "src": "/",
       "status": 301,
