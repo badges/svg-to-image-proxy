@@ -39,6 +39,22 @@ To deploy, run `now alias shields-raster-staging.now.sh raster.shields.io`
 
 The production server is at: https://raster.shields.io/
 
+## Support
+
+If you're having problems with the service, you can post questions in the
+[`#support` room in Discord][discord] and [the main Shields repo][new issue].
+
+## Contributing
+
+Contributions welcome! Feel free to
+[open discussions on the main Shields repo][new issue] and to open pull requests here.
+
+The [`#contributing` room in Discord][discord] is also a good place to discuss and ask
+questions.
+
+[new issue]: https://github.com/badges/shields/issues/new/choose
+[discord]: https://discordapp.com/invite/HjJCwm5
+
 ## License
 
 This project is licensed under the MIT license.
