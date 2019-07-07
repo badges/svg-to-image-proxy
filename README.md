@@ -1,11 +1,13 @@
 # svg-to-image-proxy
 
+[![backers and sponsors](https://img.shields.io/opencollective/all/shields.svg)][opencollective]
 [![version](https://img.shields.io/npm/v/svg-to-image-proxy.svg?style=flat-square)][npm]
 [![license](https://img.shields.io/npm/l/svg-to-image-proxy.svg?style=flat-square)][npm]
 [![build](https://img.shields.io/circleci/project/github/badges/svg-to-image-proxy.svg?style=flat-square)][build]
 [![code style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)][prettier]
 [![chat](https://img.shields.io/discord/308323056592486420.svg?style=flat-square)][discord]
 
+[opencollective]: https://opencollective.com/shields
 [npm]: https://npmjs.com/svg-to-image-proxy
 [build]: https://circleci.com/gh/badges/svg-to-image-proxy/tree/master
 [prettier]: https://prettier.io/
@@ -47,6 +49,10 @@ If you're having problems with the service, you can post questions in the
 [`#support` room in Discord][discord] and [the main Shields repo][new issue].
 
 ## Contributing
+
+If you use and love Shields, we ask that you
+[make a one-time \$10 donation to Shields][opencollective]. You can also
+contribute monthly or sponsor at a higher level.
 
 Contributions welcome! Feel free to
 [open discussions on the main Shields repo][new issue] and to open pull requests here.
