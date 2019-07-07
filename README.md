@@ -4,10 +4,12 @@
 [![license](https://img.shields.io/npm/l/svg-to-image-proxy.svg?style=flat-square)][npm]
 [![build](https://img.shields.io/circleci/project/github/badges/svg-to-image-proxy.svg?style=flat-square)][build]
 [![code style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)][prettier]
+[![chat](https://img.shields.io/discord/308323056592486420.svg?style=flat-square)][discord]
 
 [npm]: https://npmjs.com/svg-to-image-proxy
 [build]: https://circleci.com/gh/badges/svg-to-image-proxy/tree/master
 [prettier]: https://prettier.io/
+[discord]: https://discordapp.com/invite/HjJCwm5
 
 Web function to generate PNGs from SVGs. Based on [convert-svg-to-png][]
 which uses headless Chromium.
@@ -53,7 +55,6 @@ The [`#contributing` room in Discord][discord] is also a good place to discuss a
 questions.
 
 [new issue]: https://github.com/badges/shields/issues/new/choose
-[discord]: https://discordapp.com/invite/HjJCwm5
 
 ## License
 
