@@ -1,11 +1,11 @@
 # svg-to-image-proxy
 
 [![backers and sponsors](https://img.shields.io/opencollective/all/shields.svg?style=flat-square)][opencollective]
+[![chat](https://img.shields.io/discord/308323056592486420.svg?style=flat-square)][discord]
 [![version](https://img.shields.io/npm/v/svg-to-image-proxy.svg?style=flat-square)][npm]
 [![license](https://img.shields.io/npm/l/svg-to-image-proxy.svg?style=flat-square)][npm]
 [![build](https://img.shields.io/circleci/project/github/badges/svg-to-image-proxy.svg?style=flat-square)][build]
 [![code style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)][prettier]
-[![chat](https://img.shields.io/discord/308323056592486420.svg?style=flat-square)][discord]
 
 [opencollective]: https://opencollective.com/shields
 [npm]: https://npmjs.com/svg-to-image-proxy
