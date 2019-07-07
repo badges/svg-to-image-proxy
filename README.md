@@ -1,6 +1,6 @@
 # svg-to-image-proxy
 
-[![backers and sponsors](https://img.shields.io/opencollective/all/shields.svg)][opencollective]
+[![backers and sponsors](https://img.shields.io/opencollective/all/shields.svg?style=flat-square)][opencollective]
 [![version](https://img.shields.io/npm/v/svg-to-image-proxy.svg?style=flat-square)][npm]
 [![license](https://img.shields.io/npm/l/svg-to-image-proxy.svg?style=flat-square)][npm]
 [![build](https://img.shields.io/circleci/project/github/badges/svg-to-image-proxy.svg?style=flat-square)][build]
