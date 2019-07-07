@@ -24,8 +24,6 @@ const responseHeadersToForward = [
   'last-modified',
 ]
 
-const ignoredPaths = ['/', '/favicon.ico']
-
 let cleanup
 async function setup() {
   const converter = createConverter({
@@ -53,11 +51,6 @@ async function setup() {
     // Ensure we're always using the `baseUrl` by using just the path from
     // the request URL.
     const { pathname, search } = new URL(req.url, 'https://bogus.test')
-
-    if (ignoredPaths.includes(pathname)) {
-      res.statusCode = 404
-      return ''
-    }
 
     const outPath = pathname.replace('.png', '.svg')
     const outUrl = new URL(outPath, baseUrl)

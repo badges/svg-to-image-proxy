@@ -12,10 +12,18 @@
   },
   "builds": [
     {
-      "src": "rasterize.js",
+      "src": "index.js",
       "use": "@now/node",
       "config": { "maxLambdaSize": "40mb" }
     }
   ],
-  "routes": [{ "src": "/(.*)", "dest": "/rasterize.js" }]
+  "routes": [
+    { "src": "/(.*)", "dest": "/index.js" },
+    {
+      "src": "/",
+      "status": 301,
+      "headers": { "Location": "https://shields.io/" }
+    },
+    { "src": "/favicon.ico", "status": 404 }
+  ]
 }

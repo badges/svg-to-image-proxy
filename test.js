@@ -130,15 +130,4 @@ describe('svg-to-image-proxy endpoint', function() {
 
     scope.done()
   })
-
-  it('returns 404 for ignored paths', async function() {
-    const { body, statusCode } = await got(`${url}/favicon.ico`, {
-      encoding: null,
-      retry: { retries: 0 },
-      throwHttpErrors: false,
-    })
-
-    expect(statusCode).to.equal(404)
-    expect(Buffer.alloc(0).equals(body))
-  })
 })
