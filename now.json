@@ -18,12 +18,12 @@
     }
   ],
   "routes": [
-    { "src": "/(.+)", "dest": "/index.js" },
     {
       "src": "/",
       "status": 301,
       "headers": { "Location": "https://shields.io/" }
     },
-    { "src": "/favicon.ico", "status": 404 }
+    { "src": "/favicon.ico", "status": 404 },
+    { "src": "/(.+)", "dest": "/index.js" }
   ]
 }
