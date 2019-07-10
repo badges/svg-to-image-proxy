@@ -68,12 +68,22 @@ from master. Production is deployed manually for now.
 For information about current deploys, see the [Now dashboard][]. See [production hosting][]
 for a list of maintainers with access.
 
-To deploy, run `now alias shields-raster-staging.now.sh raster.shields.io`.
-This ships the current staging build to production.
-
 `raster.shields.io` is configured in the Shields Cloudflare as a CNAME for
 `alias.zeit.co` with traffic configured not to pass through Cloudflare. That's
 because it's cached by [Now's Smart CDN][cdn] instead.
+
+### Production Deployment
+
+To deploy, run `now alias shields-raster-staging.now.sh raster.shields.io`.
+This ships the current staging build to production.
+
+To setup your environment to run `now`, you'll need to install the CLI, login, and switch to the Shields team.
+
+```bash
+npm i -g now
+now login
+now teams switch shields1
+```
 
 [zeit now]: https://zeit.co/now
 [cdn]: https://zeit.co/smart-cdn
