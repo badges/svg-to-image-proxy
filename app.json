@@ -8,6 +8,9 @@
   "buildpacks": [
     {
       "url": "jontewks/puppeteer"
+    },
+    {
+      "url": "heroku/nodejs"
     }
   ],
   "env": {
