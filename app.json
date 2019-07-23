@@ -1,0 +1,23 @@
+{
+  "name": "SVG to Image Proxy",
+  "description": "A web service to create PNGs from SVGs",
+  "keywords": ["svg", "png", "image", "proxy"],
+  "website": "https://shields.io/",
+  "repository": "https://github.com/badges/svg-to-iamge-proxy",
+  "logo": "httpx://shields.io/favicon.png",
+  "env": {
+    "PUPPETEER_SKIP_CHROMIUM_DOWNLOAD": {
+      "value": "false"
+    },
+    "BASE_URL": {
+      "description": "The server that is hosting the SVGs",
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
