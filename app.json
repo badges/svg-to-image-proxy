@@ -4,7 +4,7 @@
   "keywords": ["svg", "png", "image", "proxy"],
   "website": "https://shields.io/",
   "repository": "https://github.com/badges/svg-to-iamge-proxy",
-  "logo": "httpx://shields.io/favicon.png",
+  "logo": "https://raw.githubusercontent.com/badges/shields/master/frontend/images/logo.svg?sanitize=true",
   "buildpacks": [
     {
       "url": "jontewks/puppeteer"
