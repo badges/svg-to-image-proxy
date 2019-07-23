@@ -1,7 +1,7 @@
 'use strict'
 
 const { URL } = require('url')
-// const chrome = require('chrome-aws-lambda')
+const chrome = require('chrome-aws-lambda')
 const { createConverter } = require('convert-svg-to-png')
 const got = require('got')
 const isSvg = require('is-svg')
@@ -28,10 +28,10 @@ let cleanup
 async function setup() {
   const converter = createConverter({
     puppeteer: {
-      args: ['--no-sandbox'],
-      // args: chrome.args,
-      // executablePath: await chrome.executablePath,
-      // headless: chrome.headless,
+      // args: ['--no-sandbox'],
+      args: chrome.args,
+      executablePath: await chrome.executablePath,
+      headless: chrome.headless,
     },
   })
   cleanup = async () => converter.destroy()
