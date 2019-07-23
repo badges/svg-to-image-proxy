@@ -5,6 +5,11 @@
   "website": "https://shields.io/",
   "repository": "https://github.com/badges/svg-to-iamge-proxy",
   "logo": "httpx://shields.io/favicon.png",
+  "buildpacks": [
+    {
+      "url": "jontewks/puppeteer"
+    }
+  ],
   "env": {
     "PUPPETEER_SKIP_CHROMIUM_DOWNLOAD": {
       "value": "false"
