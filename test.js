@@ -44,7 +44,7 @@ describe('svg-to-image-proxy endpoint', function() {
       .reply(200, badgeSvg)
 
     const { body, statusCode } = await got(`${url}/badge/foo-bar-blue.svg`, {
-      encoding: null,
+      responseType: 'buffer',
       retry: { retries: 0 },
     })
 
@@ -60,7 +60,7 @@ describe('svg-to-image-proxy endpoint', function() {
       .reply(200, badgeSvg)
 
     const { headers } = await got(`${url}/badge/foo-bar-blue.svg`, {
-      encoding: null,
+      responseType: 'buffer',
       retry: { retries: 0 },
     })
 
