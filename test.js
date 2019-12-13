@@ -75,7 +75,7 @@ describe('svg-to-image-proxy endpoint', function() {
       .reply(200, badgeSvg)
 
     await got(`${url}/badge/foo-bar-blue.svg?label=hello`, {
-      encoding: null,
+      responseType: 'buffer',
       retry: { retries: 0 },
     })
 
@@ -89,7 +89,7 @@ describe('svg-to-image-proxy endpoint', function() {
       .reply(200, badgeSvg)
 
     await got(`${url}/badge/foo-bar-blue.svg`, {
-      encoding: null,
+      responseType: 'buffer',
       retry: { retries: 0 },
       headers: { 'If-None-Match': 'abcde' },
     })
@@ -103,7 +103,7 @@ describe('svg-to-image-proxy endpoint', function() {
       .reply(200, badgeSvg, { 'Cache-Control': 'max-age=0, must-revalidate' })
 
     const { headers } = await got(`${url}/badge/foo-bar-blue.svg`, {
-      encoding: null,
+      responseType: 'buffer',
     })
 
     expect(headers['cache-control']).to.equal('max-age=0, must-revalidate')
@@ -120,7 +120,7 @@ describe('svg-to-image-proxy endpoint', function() {
       .reply(500)
 
     const { body, statusCode } = await got(`${url}/badge/foo-bar-blue.svg`, {
-      encoding: null,
+      responseType: 'buffer',
       retry: { retries: 0 },
       throwHttpErrors: false,
     })
