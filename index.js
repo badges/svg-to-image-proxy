@@ -28,6 +28,7 @@ let cleanup
 async function setup() {
   const converter = createConverter({
     puppeteer: {
+      // args: ['--no-sandbox'],
       args: chrome.args,
       executablePath: await chrome.executablePath,
       headless: chrome.headless,
