@@ -1,0 +1,33 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: '/'
+    schedule:
+      interval: monthly
+      time: '12:00'
+    open-pull-requests-limit: 99
+    ignore:
+      - dependency-name: nock
+        versions:
+          - '> 11.0.0.pre.beta.27, < 11.0.1'
+      - dependency-name: eslint
+        versions:
+          - 7.16.0
+          - 7.19.0
+      - dependency-name: nock
+        versions:
+          - 13.0.5
+          - 13.0.7
+      - dependency-name: eslint-config-prettier
+        versions:
+          - 7.1.0
+          - 7.2.0
+      - dependency-name: puppeteer
+        versions:
+          - 5.5.0
+      - dependency-name: mocha
+        versions:
+          - 8.2.1
+      - dependency-name: chrome-aws-lambda
+        versions:
+          - 5.5.0
