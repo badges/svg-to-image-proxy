@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/badges/svg-to-image-proxy#readme",
   "dependencies": {
-    "chrome-aws-lambda": "^1.18.0",
+    "chrome-aws-lambda": "^10.1.0",
     "convert-svg-to-png": "^0.5.0",
     "got": "^9.6.0",
     "is-svg": "^4.2.0",
