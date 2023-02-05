@@ -1,5 +1,11 @@
 # svg-to-image-proxy
 
+## ⚠️ Deprecated
+
+This package is now deprecated and archived. Shields.io has migrated to [squint](https://github.com/badges/squint/) for SVG to PNG conversion.
+
+---
+
 [![backers and sponsors](https://img.shields.io/opencollective/all/shields.svg?style=flat-square)][opencollective]
 [![chat](https://img.shields.io/discord/308323056592486420.svg?style=flat-square)][discord]
 [![version](https://img.shields.io/npm/v/svg-to-image-proxy.svg?style=flat-square)][npm]
